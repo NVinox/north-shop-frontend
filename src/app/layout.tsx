@@ -4,6 +4,8 @@ import { Rubik } from "next/font/google";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 
+import { HOME_META_TITLE, HOME_META_DESCRIPTION } from "@/constants";
+
 import "./globals.css";
 
 const rubik = Rubik({
@@ -13,8 +15,8 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-	title: "Главная | Северяночка",
-	description: "Северяночка топ магазин, всегда там отовариваюсь",
+	title: HOME_META_TITLE,
+	description: HOME_META_DESCRIPTION,
 };
 
 export default function RootLayout({
