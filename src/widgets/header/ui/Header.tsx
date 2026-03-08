@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { SearchProduct } from "@/features/searchProduct";
+
 import {
 	BoxIcon,
 	LogoIcon,
@@ -10,9 +12,6 @@ import {
 	BurgerIcon,
 	LogoTitleIcon,
 } from "@/shared/icons";
-import { LayoutContainer } from "@/shared/layoutContainer";
-import PlaceholderAvatar from "@shared/assets/placeholder-avatar.svg";
-
 import {
 	CART_TEXT,
 	FAVORITES_TEXT,
@@ -21,8 +20,9 @@ import {
 	HOME_ROUTE,
 	FAVORITES_ROUTE,
 	CATEGORIES_ROUTE,
-	HEADER_SEARCH_PLACEHOLDER,
 } from "@/shared/constants";
+import { LayoutContainer } from "@/shared/layoutContainer";
+import PlaceholderAvatar from "@shared/assets/placeholder-avatar.svg";
 
 export default function Header() {
 	return (
@@ -41,12 +41,7 @@ export default function Header() {
 							<BurgerIcon />
 							{CATEGORIES_TEXT}
 						</button>
-						<input
-							id="searchProduct"
-							className="py-[8px] pl-[16px] pr-[42px] border-[1px] border-secondary rounded-[4px] placeholder:text-hard-text"
-							placeholder={HEADER_SEARCH_PLACEHOLDER}
-							type="text"
-						/>
+						<SearchProduct />
 					</div>
 
 					<nav className="flex items-center gap-x-[24px]">

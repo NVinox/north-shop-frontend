@@ -15,6 +15,8 @@
 	--hard: #8f8f8f;
 
 	--shadow-header-dark: rgba(0, 0, 0, 0.1);
+	--shadow-dropdown-dark: rgba(0, 0, 0, 0.1);
+	--shadow-input-secondary: rgb(112, 192, 91, 0.2);
 }
 
 @theme inline {
@@ -23,12 +25,15 @@
 	--color-surface-text: var(--surface-text);
 	--color-secondary-text: var(--secondary-text);
 	--color-hard-text: var(--hard);
+	--color-primary-text: var(--primary);
 
 	--color-success: var(--success);
 	--color-secondary: var(--secondary);
 	--color-surface: var(--surface);
 
 	--shadow-header: 2px 4px 8px 0 var(--shadow-header-dark);
+	--shadow-dropdown: 4px 8px 16px 0 var(--shadow-dropdown-dark);
+	--shadow-input-focus: 4px 8px 16px 0 var(--shadow-input-secondary);
 }
 
 body {
