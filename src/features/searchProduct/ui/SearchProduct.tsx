@@ -31,7 +31,7 @@ export default function SearchProduct() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="absolute w-full shadow-dropdown [clip-path:inset(0px_-20px_-20px_-20px)] radius-[4px] bg-surface [&>li:first-child>a]:pt-0 shadow-input-focus rounded-b-[4px] border-[1px] border-secondary border-t-0"
+						className="absolute w-full shadow-dropdown [clip-path:inset(0px_-20px_-20px_-20px)] bg-surface [&>li:first-child>a]:pt-0 shadow-input-focus rounded-b-[4px] border-[1px] border-secondary border-t-0"
 					>
 						<li key={1}>
 							<Link

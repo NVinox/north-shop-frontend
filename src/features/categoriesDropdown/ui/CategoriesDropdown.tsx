@@ -27,7 +27,7 @@ export default function CategoriesDropdown() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="absolute bg-surface radius-[4px] min-w-[300px] max-w-[350px] shadow-dropdown [&>li:first-child>a]:pt-[25px] [&>li:last-child>a]:pb-[25px]"
+						className="absolute bg-surface rounded-[4px] min-w-[300px] max-w-[350px] shadow-dropdown [&>li:first-child>a]:pt-[25px] [&>li:last-child>a]:pb-[25px]"
 					>
 						<li key={1}>
 							<Link
