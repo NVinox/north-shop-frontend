@@ -4,8 +4,11 @@ import {
 	CartIcon,
 	HeartIcon,
 	ArrowDown,
+	PhoneIcon,
 	BurgerIcon,
 	LogoTitleIcon,
+	DesignByLogoIcon,
+	LogoTitleRoundIcon,
 } from "@/shared/icons/ui/Icons";
 
 export {
@@ -14,6 +17,9 @@ export {
 	CartIcon,
 	HeartIcon,
 	ArrowDown,
+	PhoneIcon,
 	BurgerIcon,
 	LogoTitleIcon,
+	DesignByLogoIcon,
+	LogoTitleRoundIcon,
 };

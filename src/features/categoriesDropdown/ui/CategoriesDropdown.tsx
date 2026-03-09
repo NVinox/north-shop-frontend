@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { BurgerIcon } from "@/shared/icons";
 import { LayoutContainer } from "@/shared/layoutContainer";
-import { CATEGORIES_TEXT } from "@/shared/constants";
+import { CATEGORIES_ROUTE_TEXT } from "@/shared/constants";
 
 export default function CategoriesDropdown() {
 	const [isOpen, setOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ export default function CategoriesDropdown() {
 				onClick={() => setOpen(true)}
 			>
 				<BurgerIcon />
-				{CATEGORIES_TEXT}
+				{CATEGORIES_ROUTE_TEXT}
 			</button>
 
 			<AnimatePresence>
