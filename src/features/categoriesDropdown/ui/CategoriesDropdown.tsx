@@ -5,13 +5,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { BurgerIcon } from "@/shared/icons";
+import { LayoutContainer } from "@/shared/layoutContainer";
 import { CATEGORIES_TEXT } from "@/shared/constants";
 
 export default function CategoriesDropdown() {
 	const [isOpen, setOpen] = useState<boolean>(false);
 
 	return (
-		<div className="relative" onBlur={() => setOpen(false)}>
+		<div onBlur={() => setOpen(false)}>
 			<button
 				className="text-[16px] p-[8px] pr-[16px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer duration-200 transition-colors bg-secondary hover:bg-secondary-hover"
 				onClick={() => setOpen(true)}
@@ -22,38 +23,79 @@ export default function CategoriesDropdown() {
 
 			<AnimatePresence>
 				{isOpen && (
-					<motion.ul
+					<motion.nav
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="absolute bg-surface rounded-[4px] min-w-[300px] max-w-[350px] shadow-dropdown [&>li:first-child>a]:pt-[25px] [&>li:last-child>a]:pb-[25px]"
+						className="fixed top-[74px] left-0 bg-surface rounded-[4px] pt-[30px] pb-[30px] w-full shadow-dropdown z-5"
 					>
-						<li key={1}>
-							<Link
-								className="block px-[32px] py-[10px] transition-color duration-200 hover:text-primary-text"
-								href="#"
-							>
-								Хлебобулочные изделия
-							</Link>
-						</li>
-						<li key={2}>
-							<Link
-								className="block px-[32px] py-[10px] transition-color duration-200 hover:text-primary-text"
-								href="#"
-							>
-								Молоко, сыр, яйцо
-							</Link>
-						</li>
-						<li key={3}>
-							<Link
-								className="block px-[32px] py-[10px] transition-color duration-200 hover:text-primary-text"
-								href="#"
-							>
-								Фрукты и овощи
-							</Link>
-						</li>
-					</motion.ul>
+						<LayoutContainer>
+							<div className="flex gap-x-[40px]">
+								<ul className="max-w-[270px] w-full">
+									<li key={1}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Хлебобулочные изделия
+										</Link>
+									</li>
+									<li key={2}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Молоко, сыр, яйцо
+										</Link>
+									</li>
+									<li key={3}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Фрукты и овощи
+										</Link>
+									</li>
+									<li key={4}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Замороженные продукты
+										</Link>
+									</li>
+								</ul>
+
+								<ul className="max-w-[270px] w-full">
+									<li key={1}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Напитки
+										</Link>
+									</li>
+									<li key={2}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Кондитерские изделия
+										</Link>
+									</li>
+									<li key={3}>
+										<Link
+											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											href="#"
+										>
+											Чай, кофе
+										</Link>
+									</li>
+								</ul>
+							</div>
+						</LayoutContainer>
+					</motion.nav>
 				)}
 			</AnimatePresence>
 		</div>

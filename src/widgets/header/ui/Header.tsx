@@ -25,7 +25,7 @@ import { HeaderLink } from "@/shared/headerLink";
 
 export default function Header() {
 	return (
-		<header className="bg-surface shadow-header">
+		<header className="sticky bg-surface shadow-header z-10">
 			<LayoutContainer>
 				<div className="flex items-center justify-between">
 					<nav>
