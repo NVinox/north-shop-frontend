@@ -1,11 +1,43 @@
 @import "tailwindcss";
 
 :root {
-	--font-color: #414141;
+	--surface-text: #414141;
+	--secondary-text: #ffffff;
+
+	--surface: #ffffff;
+	--black: #000000;
+	--primary: #ff6633;
+	--secondary: #70c05b;
+	--success: #008c49;
+	--info: #1cb9fc;
+	--warning: #fca21c;
+	--error: #d80000;
+	--hard: #8f8f8f;
+
+	--secondary-hover: #72ce5b;
+
+	--shadow-header-dark: rgba(0, 0, 0, 0.1);
+	--shadow-dropdown-dark: rgba(0, 0, 0, 0.1);
+	--shadow-input-secondary: rgb(112, 192, 91, 0.2);
 }
 
 @theme inline {
 	--font-sans: var(--font-rubik);
+
+	--color-surface-text: var(--surface-text);
+	--color-secondary-text: var(--secondary-text);
+	--color-hard-text: var(--hard);
+	--color-primary-text: var(--primary);
+
+	--color-success: var(--success);
+	--color-secondary: var(--secondary);
+	--color-surface: var(--surface);
+
+	--color-secondary-hover: var(--secondary-hover);
+
+	--shadow-header: 2px 4px 8px 0 var(--shadow-header-dark);
+	--shadow-dropdown: 4px 8px 16px 0 var(--shadow-dropdown-dark);
+	--shadow-input-focus: 4px 8px 16px 0 var(--shadow-input-secondary);
 }
 
 body {

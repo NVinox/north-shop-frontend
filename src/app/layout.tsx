@@ -4,7 +4,7 @@ import { Rubik } from "next/font/google";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 
-import { HOME_META_TITLE, HOME_META_DESCRIPTION } from "@/constants";
+import { HOME_META_TITLE, HOME_META_DESCRIPTION } from "@/shared/constants";
 
 import "./globals.css";
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang="ru">
 			<body
-				className={`${rubik.variable} font-sans antialiased min-h-screen flex flex-col`}
+				className={`${rubik.variable} font-sans antialiased min-h-screen flex flex-col text-surface-text`}
 			>
 				<Header />
 				<main className="grow">{children}</main>
