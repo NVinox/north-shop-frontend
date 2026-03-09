@@ -12,13 +12,13 @@ import {
 	LogoTitleIcon,
 } from "@/shared/icons";
 import {
-	CART_TEXT,
-	FAVORITES_TEXT,
-	CART_ROUTE,
-	HOME_ROUTE,
-	FAVORITES_ROUTE,
-	CATEGORIES_ROUTE,
-	ORDERS_TEXT,
+	HOME_ROUTE_URL,
+	CART_ROUTE_URL,
+	CART_ROUTE_TEXT,
+	ORDERS_ROUTE_TEXT,
+	FAVORITES_ROUTE_URL,
+	CATEGORIES_ROUTE_URL,
+	FAVORITES_ROUTE_TEXT,
 } from "@/shared/constants";
 import { LayoutContainer } from "@/shared/layoutContainer";
 import { HeaderLink } from "@/shared/headerLink";
@@ -29,7 +29,10 @@ export default function Header() {
 			<LayoutContainer>
 				<div className="flex items-center justify-between">
 					<nav>
-						<Link className="flex items-center gap-x-[10px]" href={HOME_ROUTE}>
+						<Link
+							className="flex items-center gap-x-[10px]"
+							href={HOME_ROUTE_URL}
+						>
 							<LogoIcon />
 							<LogoTitleIcon />
 						</Link>
@@ -43,18 +46,18 @@ export default function Header() {
 					<nav className="flex items-center gap-x-[24px]">
 						<HeaderLink
 							icon={<HeartIcon />}
-							href={FAVORITES_ROUTE}
-							text={FAVORITES_TEXT}
+							href={FAVORITES_ROUTE_URL}
+							text={FAVORITES_ROUTE_TEXT}
 						/>
 						<HeaderLink
 							icon={<BoxIcon />}
-							href={CATEGORIES_ROUTE}
-							text={ORDERS_TEXT}
+							href={CATEGORIES_ROUTE_URL}
+							text={ORDERS_ROUTE_TEXT}
 						/>
 						<HeaderLink
 							icon={<CartIcon />}
-							href={CART_ROUTE}
-							text={CART_TEXT}
+							href={CART_ROUTE_URL}
+							text={CART_ROUTE_TEXT}
 						/>
 					</nav>
 
