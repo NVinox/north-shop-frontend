@@ -14,13 +14,14 @@ import {
 import {
 	CART_TEXT,
 	FAVORITES_TEXT,
-	CATEGORIES_TEXT,
 	CART_ROUTE,
 	HOME_ROUTE,
 	FAVORITES_ROUTE,
 	CATEGORIES_ROUTE,
+	ORDERS_TEXT,
 } from "@/shared/constants";
 import { LayoutContainer } from "@/shared/layoutContainer";
+import { HeaderLink } from "@/shared/headerLink";
 
 export default function Header() {
 	return (
@@ -40,24 +41,21 @@ export default function Header() {
 					</div>
 
 					<nav className="flex items-center gap-x-[24px]">
-						<Link
-							className="flex flex-col items-center gap-y-[8px] text-[16px]"
-							href={CATEGORIES_ROUTE}
-						>
-							<HeartIcon /> {CATEGORIES_TEXT}
-						</Link>
-						<Link
-							className="flex flex-col items-center gap-y-[8px] text-[16px]"
+						<HeaderLink
+							icon={<HeartIcon />}
 							href={FAVORITES_ROUTE}
-						>
-							<BoxIcon /> {FAVORITES_TEXT}
-						</Link>
-						<Link
-							className="flex flex-col items-center gap-y-[8px] text-[16px]"
+							text={FAVORITES_TEXT}
+						/>
+						<HeaderLink
+							icon={<BoxIcon />}
+							href={CATEGORIES_ROUTE}
+							text={ORDERS_TEXT}
+						/>
+						<HeaderLink
+							icon={<CartIcon />}
 							href={CART_ROUTE}
-						>
-							<CartIcon /> {CART_TEXT}
-						</Link>
+							text={CART_TEXT}
+						/>
 					</nav>
 
 					<ProfileDropdown />
