@@ -14,6 +14,8 @@
 	--error: #d80000;
 	--hard: #8f8f8f;
 
+	--secondary-hover: #72ce5b;
+
 	--shadow-header-dark: rgba(0, 0, 0, 0.1);
 	--shadow-dropdown-dark: rgba(0, 0, 0, 0.1);
 	--shadow-input-secondary: rgb(112, 192, 91, 0.2);
@@ -30,6 +32,8 @@
 	--color-success: var(--success);
 	--color-secondary: var(--secondary);
 	--color-surface: var(--surface);
+
+	--color-secondary-hover: var(--secondary-hover);
 
 	--shadow-header: 2px 4px 8px 0 var(--shadow-header-dark);
 	--shadow-dropdown: 4px 8px 16px 0 var(--shadow-dropdown-dark);

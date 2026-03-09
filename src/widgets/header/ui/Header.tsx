@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { SearchProduct } from "@/features/searchProduct";
+import { CategoriesDropdown } from "@/features/categoriesDropdown";
 
 import {
 	BoxIcon,
@@ -9,7 +10,6 @@ import {
 	CartIcon,
 	HeartIcon,
 	ArrowDown,
-	BurgerIcon,
 	LogoTitleIcon,
 } from "@/shared/icons";
 import {
@@ -37,10 +37,7 @@ export default function Header() {
 					</nav>
 
 					<div className="flex items-center gap-x-[16px]">
-						<button className="text-[16px] p-[8px] pr-[16px] flex items-center gap-x-[16px] bg-secondary text-secondary-text rounded-[4px] cursor-pointer">
-							<BurgerIcon />
-							{CATEGORIES_TEXT}
-						</button>
+						<CategoriesDropdown/>
 						<SearchProduct />
 					</div>
 

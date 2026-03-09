@@ -26,41 +26,39 @@ export default function SearchProduct() {
 
 			<AnimatePresence>
 				{isOpen && (
-					<motion.div
+					<motion.ul
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="absolute w-full shadow-dropdown [clip-path:inset(0px_-20px_-20px_-20px)] radius-[4px] bg-surface"
+						className="absolute w-full shadow-dropdown [clip-path:inset(0px_-20px_-20px_-20px)] radius-[4px] bg-surface [&>li:first-child>a]:pt-0 shadow-input-focus rounded-b-[4px] border-[1px] border-secondary border-t-0"
 					>
-						<ul className="[&>li:first-child>a]:pt-0 shadow-input-focus rounded-b-[4px] border-[1px] border-secondary border-t-0">
-							<li key={1}>
-								<Link
-									className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
-									href="#"
-								>
-									<span>Тест 1</span>
-									<BurgerIcon color="var(--black)" />
-								</Link>
-							</li>
-							<li key={2}>
-								<Link
-									className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
-									href="#"
-								>
-									<span>Тест 2</span>
-								</Link>
-							</li>
-							<li key={3}>
-								<Link
-									className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
-									href="#"
-								>
-									<span>Тест 3</span>
-								</Link>
-							</li>
-						</ul>
-					</motion.div>
+						<li key={1}>
+							<Link
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								href="#"
+							>
+								<span>Тест 1</span>
+								<BurgerIcon color="var(--black)" />
+							</Link>
+						</li>
+						<li key={2}>
+							<Link
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								href="#"
+							>
+								<span>Тест 2</span>
+							</Link>
+						</li>
+						<li key={3}>
+							<Link
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								href="#"
+							>
+								<span>Тест 3</span>
+							</Link>
+						</li>
+					</motion.ul>
 				)}
 			</AnimatePresence>
 		</div>
