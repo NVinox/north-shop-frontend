@@ -28,7 +28,7 @@ export default function CategoriesDropdown() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="fixed top-[74px] left-0 bg-surface rounded-[4px] pt-[30px] pb-[30px] w-full shadow-dropdown z-5"
+						className="fixed top-[74px] left-0 bg-surface rounded-[4px] py-[30px] w-full shadow-dropdown z-5"
 					>
 						<LayoutContainer>
 							<div className="flex gap-x-[40px]">
