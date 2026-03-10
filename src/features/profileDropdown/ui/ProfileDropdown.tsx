@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { cn } from "@/shared/lib/utils";
-import { ArrowDown } from "@/shared/icons";
+import { ArrowDownIcon } from "@/shared/icons";
 import PlaceholderAvatar from "@shared/assets/placeholder-avatar.svg";
 
 export default function ProfileDropdown() {
@@ -13,29 +13,32 @@ export default function ProfileDropdown() {
 
 	return (
 		<div
-			className="relative max-w-[200px] w-full"
+			className="relative hidden max-w-[230px] lg:w-full md:block"
 			onBlur={() => setOpen(!isOpen)}
 		>
 			<button
 				className={cn(
-					"flex items-center justify-between p-[16px] gap-x-[10px] cursor-pointer w-full",
-					isOpen && "shadow-dropdown",
+					"flex items-center p-[10px] gap-x-[10px] cursor-pointer w-full lg:p-[16px]",
+					isOpen && "lg:shadow-dropdown",
 				)}
 				onClick={() => setOpen(true)}
 				type="button"
 			>
 				<Image
-					className="rounded-full"
+					className="rounded-full shrink-0"
 					src={PlaceholderAvatar}
 					alt="Альт для заглушки"
 					width="40"
 					height="40"
 				/>
-				<span className="flex flex-col text-start">
+				<span className="hidden text-start lg:flex lg:flex-col">
 					<span className="capitalize">Сергей</span>
 					<span className="text-[12px] text-hard-text">Подпись</span>
 				</span>
-				<ArrowDown isRotate={isOpen} />
+				<ArrowDownIcon
+					className="hidden ml-auto shrink-0 lg:block"
+					isRotate={isOpen}
+				/>
 			</button>
 
 			<AnimatePresence>
@@ -45,7 +48,7 @@ export default function ProfileDropdown() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="absolute bg-surface w-full shadow-dropdown rounded-b-[4px] [clip-path:inset(0px_-20px_-20px_-20px)]"
+						className="fixed lg:absolute xs:top-[60px] xs:left-0 bg-surface w-full shadow-dropdown rounded-b-[4px] [clip-path:inset(0px_-20px_-20px_-20px)]"
 					>
 						<li key={1}>
 							<button

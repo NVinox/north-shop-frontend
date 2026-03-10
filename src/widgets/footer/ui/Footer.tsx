@@ -58,7 +58,7 @@ const SOCIALS: ISocial[] = [
 
 export default function Footer() {
 	return (
-		<footer className="relative py-[24px]">
+		<footer className="relative md:py-[24px] sm:py-[32px] xs:py-[40px]">
 			<Image
 				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover h-full z-[-1]"
 				src={FooterBackground}
@@ -74,9 +74,8 @@ export default function Footer() {
 							<LogoTitleRoundIcon />
 						</div>
 					</div>
-
-					<nav className="md:row-start-1 lg:ml-[40px] xl:max-w-full md:max-w-[500px] md:col-start-2 md:ml-[20px] md:mt-0 sm:max-w-full xs:mt-[24px] xs:ml-0 xs:row-start-3 xs:col-start-1 xs:col-span-full">
-						<ul className="flex flex-wrap items-center gap-y-[8px] lg:gap-x-[40px] lg:col-start-2 md:col-start-1 xs:gap-x-[16px]">
+					<nav className="xl:max-w-full lg:ml-[40px] md:ml-[20px] md:max-w-[500px] md:col-start-2 md:row-start-1 sm:max-w-full sm:ml-0 sm:mt-0 xs:mt-[20px] xs:row-start-3 xs:col-start-1 xs:col-span-full">
+						<ul className="flex flex-wrap items-center lg:gap-x-[40px] lg:col-start-2 md:gap-y-[8px] md:col-start-1 xs:gap-[16px]">
 							{LINKS.map(({ id, text, href }) => (
 								<li key={id}>
 									<Link
@@ -89,7 +88,6 @@ export default function Footer() {
 							))}
 						</ul>
 					</nav>
-
 					<ul className="grid md:grid-cols-2 md:gap-[8px] lg:grid-cols-4 lg:gap-[16px] md:row-start-1 md:col-start-3 xs:row-start-1 xs:col-start-3 xs:gap-[16px] xs:grid-cols-4 ml-[30px]">
 						{SOCIALS.map(({ id, href, icon, socialName }) => (
 							<li key={id}>
@@ -105,7 +103,6 @@ export default function Footer() {
 							</li>
 						))}
 					</ul>
-
 					<div className="flex flex-col items-end gap-y-[25px] lg:ml-[40px] md:ml-[25px] md:col-start-4 md:row-start-1 xs:col-start-3 xs:row-start-2">
 						<Link
 							className="flex items-center gap-x-[8px] whitespace-nowrap group"
@@ -115,7 +112,6 @@ export default function Footer() {
 							<span>{CONTACT_PHONE}</span>
 						</Link>
 					</div>
-
 					<div className="hidden md:flex md:items-center md:ml-auto md:gap-x-[8px] md:col-start-4">
 						<span className="text-[12px]">Дизайн</span>
 						<DesignByLogoIcon />

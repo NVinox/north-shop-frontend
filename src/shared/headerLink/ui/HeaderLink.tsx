@@ -2,17 +2,16 @@ import { ReactNode } from "react";
 import Link, { LinkProps } from "next/link";
 
 interface IProps extends LinkProps {
-	icon: ReactNode;
-	text: string;
+	children: ReactNode;
 }
 
-export default function HeaderLink({ text, icon, href }: IProps) {
+export default function HeaderLink({ href, children }: IProps) {
 	return (
 		<Link
-			className="flex flex-col items-center gap-y-[8px] text-[16px] transition-color duration-200 hover:text-primary-text"
+			className="flex flex-col items-center gap-y-[5px] text-[12px] transition-color duration-200 hover:text-primary-text"
 			href={href}
 		>
-			{icon} {text}
+			{children}
 		</Link>
 	);
 }

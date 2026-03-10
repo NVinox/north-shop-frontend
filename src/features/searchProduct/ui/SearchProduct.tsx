@@ -12,7 +12,7 @@ export default function SearchProduct() {
 	const [isOpen, setOpen] = useState<boolean>(false);
 
 	return (
-		<div className="relative" onBlur={() => setOpen(false)}>
+		<div className="relative w-full" onBlur={() => setOpen(false)}>
 			<SearchInput
 				value={query}
 				onChange={(e) => {
