@@ -314,9 +314,14 @@ export function LogoTitleRoundIcon() {
 	);
 }
 
-export function PhoneIcon() {
+interface IPhoneIconProps {
+	className?: string;
+}
+
+export function PhoneIcon({ className = "" }: IPhoneIconProps) {
 	return (
 		<svg
+			className={className}
 			xmlns="http://www.w3.org/2000/svg"
 			width="24"
 			height="24"

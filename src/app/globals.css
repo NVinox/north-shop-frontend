@@ -38,6 +38,8 @@
 	--shadow-header: 2px 4px 8px 0 var(--shadow-header-dark);
 	--shadow-dropdown: 4px 8px 16px 0 var(--shadow-dropdown-dark);
 	--shadow-input-focus: 4px 8px 16px 0 var(--shadow-input-secondary);
+
+	--breakpoint-xs: 320px;
 }
 
 body {

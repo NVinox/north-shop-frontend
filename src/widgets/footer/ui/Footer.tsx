@@ -67,56 +67,56 @@ export default function Footer() {
 			/>
 
 			<LayoutContainer>
-				<div className="flex flex-col items-end gap-y-[16px]">
-					<div className="flex justify-between items-center gap-x-[20px] w-full">
-						<div className="flex items-center gap-x-[40px]">
-							<div className="flex flex-col items-center">
-								<LogoIcon />
-								<LogoTitleRoundIcon />
-							</div>
-							<nav>
-								<ul className="flex items-center gap-x-[40px]">
-									{LINKS.map(({ id, text, href }) => (
-										<li key={id}>
-											<Link
-												className="text-[12px] duration-200 transition-color hover:text-primary-text py-[5px]"
-												href={href}
-											>
-												{text}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</nav>
-						</div>
-
-						<div className="flex items-start gap-x-[40px]">
-							<ul className="flex items-center gap-x-[16px]">
-								{SOCIALS.map(({ id, href, icon, socialName }) => (
-									<li key={id}>
-										<Link
-											href={href}
-											rel="nofollow noopener noreferrer"
-											target="_blank"
-											aria-label={socialName}
-										>
-											{icon}
-										</Link>
-									</li>
-								))}
-							</ul>
-							<div className="flex flex-col gap-y-[25px]">
-								<Link
-									className="flex items-center gap-x-[8px]"
-									href={`tel:+${CONTACT_PHONE.replace(/\s/g, "")}`}
-								>
-									<PhoneIcon />
-									<span>{CONTACT_PHONE}</span>
-								</Link>
-							</div>
+				<div className="grid grid-cols-[auto_1fr_auto] w-full">
+					<div className="flex items-start">
+						<div className="flex flex-col items-center">
+							<LogoIcon />
+							<LogoTitleRoundIcon />
 						</div>
 					</div>
-					<div className="flex items-center gap-x-[8px]">
+
+					<nav className="md:row-start-1 lg:ml-[40px] xl:max-w-full md:max-w-[500px] md:col-start-2 md:ml-[20px] md:mt-0 sm:max-w-full xs:mt-[24px] xs:ml-0 xs:row-start-3 xs:col-start-1 xs:col-span-full">
+						<ul className="flex flex-wrap items-center gap-y-[8px] lg:gap-x-[40px] lg:col-start-2 md:col-start-1 xs:gap-x-[16px]">
+							{LINKS.map(({ id, text, href }) => (
+								<li key={id}>
+									<Link
+										className="text-[12px] duration-200 transition-color hover:text-primary-text py-[5px]"
+										href={href}
+									>
+										{text}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+
+					<ul className="grid md:grid-cols-2 md:gap-[8px] lg:grid-cols-4 lg:gap-[16px] md:row-start-1 md:col-start-3 xs:row-start-1 xs:col-start-3 xs:gap-[16px] xs:grid-cols-4 ml-[30px]">
+						{SOCIALS.map(({ id, href, icon, socialName }) => (
+							<li key={id}>
+								<Link
+									className="shrink-0 block w-[24px]"
+									href={href}
+									rel="nofollow noopener noreferrer"
+									target="_blank"
+									aria-label={socialName}
+								>
+									{icon}
+								</Link>
+							</li>
+						))}
+					</ul>
+
+					<div className="flex flex-col items-end gap-y-[25px] lg:ml-[40px] md:ml-[25px] md:col-start-4 md:row-start-1 xs:col-start-3 xs:row-start-2">
+						<Link
+							className="flex items-center gap-x-[8px] whitespace-nowrap group"
+							href={`tel:+${CONTACT_PHONE.replace(/\s/g, "")}`}
+						>
+							<PhoneIcon className="shrink-0" />
+							<span>{CONTACT_PHONE}</span>
+						</Link>
+					</div>
+
+					<div className="hidden md:flex md:items-center md:ml-auto md:gap-x-[8px] md:col-start-4">
 						<span className="text-[12px]">Дизайн</span>
 						<DesignByLogoIcon />
 					</div>
