@@ -17,6 +17,10 @@ const rubik = Rubik({
 export const metadata: Metadata = {
 	title: HOME_META_TITLE,
 	description: HOME_META_DESCRIPTION,
+	icons: {
+		icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+		apple: "/apple-touch-icon.png",
+	},
 };
 
 export default function RootLayout({
