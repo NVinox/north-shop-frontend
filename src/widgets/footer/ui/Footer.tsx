@@ -1,9 +1,14 @@
+import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import {
+	VKIcon,
+	OKIcon,
 	LogoIcon,
 	PhoneIcon,
+	FacebookIcon,
+	InstagramIcon,
 	DesignByLogoIcon,
 	LogoTitleRoundIcon,
 } from "@/shared/icons";
@@ -21,10 +26,6 @@ import {
 	VACANCIES_ROUTE_URL,
 } from "@/shared/constants";
 import { LayoutContainer } from "@/shared/layoutContainer";
-import Instagram from "@/shared/assets/instagram.svg";
-import VK from "@/shared/assets/vkontakte.svg";
-import Facebook from "@/shared/assets/facebook.svg";
-import OK from "@/shared/assets/ok.svg";
 import FooterBackground from "@/shared/assets/footer-bg.jpg";
 
 interface ILink {
@@ -36,8 +37,8 @@ interface ILink {
 interface ISocial {
 	id: number;
 	href: string;
-	icon: string;
-	alt: string;
+	icon: ReactNode;
+	socialName: string;
 }
 
 const LINKS: ILink[] = [
@@ -49,10 +50,10 @@ const LINKS: ILink[] = [
 ];
 
 const SOCIALS: ISocial[] = [
-	{ id: 1, href: "#", icon: Instagram, alt: "Instagram" },
-	{ id: 2, href: "#", icon: VK, alt: "VK" },
-	{ id: 3, href: "#", icon: Facebook, alt: "Facebook" },
-	{ id: 4, href: "#", icon: OK, alt: "OK" },
+	{ id: 1, href: "#", icon: <InstagramIcon />, socialName: "Instagram" },
+	{ id: 2, href: "#", icon: <VKIcon />, socialName: "VK" },
+	{ id: 3, href: "#", icon: <FacebookIcon />, socialName: "Facebook" },
+	{ id: 4, href: "#", icon: <OKIcon />, socialName: "OK" },
 ];
 
 export default function Footer() {
@@ -91,10 +92,15 @@ export default function Footer() {
 
 						<div className="flex items-start gap-x-[40px]">
 							<ul className="flex items-center gap-x-[16px]">
-								{SOCIALS.map(({ id, href, icon, alt }) => (
+								{SOCIALS.map(({ id, href, icon, socialName }) => (
 									<li key={id}>
-										<Link href={href}>
-											<Image width={24} height={24} src={icon} alt={alt} />
+										<Link
+											href={href}
+											rel="nofollow noopener noreferrer"
+											target="_blank"
+											aria-label={socialName}
+										>
+											{icon}
 										</Link>
 									</li>
 								))}

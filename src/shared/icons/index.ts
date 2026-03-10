@@ -1,4 +1,6 @@
 import {
+	OKIcon,
+	VKIcon,
 	BoxIcon,
 	LogoIcon,
 	CartIcon,
@@ -6,12 +8,16 @@ import {
 	ArrowDown,
 	PhoneIcon,
 	BurgerIcon,
+	FacebookIcon,
+	InstagramIcon,
 	LogoTitleIcon,
 	DesignByLogoIcon,
 	LogoTitleRoundIcon,
 } from "@/shared/icons/ui/Icons";
 
 export {
+	OKIcon,
+	VKIcon,
 	BoxIcon,
 	LogoIcon,
 	CartIcon,
@@ -19,6 +25,8 @@ export {
 	ArrowDown,
 	PhoneIcon,
 	BurgerIcon,
+	FacebookIcon,
+	InstagramIcon,
 	LogoTitleIcon,
 	DesignByLogoIcon,
 	LogoTitleRoundIcon,
