@@ -1,3 +1,9 @@
+import { MainSlider } from "@/widgets/mainSlider";
+
 export default function Home() {
-	return <div></div>;
+	return (
+		<>
+			<MainSlider />
+		</>
+	);
 }
