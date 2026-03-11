@@ -26,7 +26,7 @@ interface ILink {
 const LINKS: ILink[] = [
 	{
 		id: 1,
-		icon: <BurgerIcon color="black" />,
+		icon: <BurgerIcon />,
 		href: CATEGORIES_ROUTE_URL,
 		text: CATEGORIES_ROUTE_TEXT,
 	},
@@ -52,7 +52,7 @@ const LINKS: ILink[] = [
 
 export default function NavigationMobile() {
 	return (
-		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header md:hidden">
+		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header">
 			<LayoutContainer>
 				<div className="flex items-center w-full justify-between">
 					<nav className="contents">
@@ -60,7 +60,7 @@ export default function NavigationMobile() {
 							{LINKS.map(({ id, icon, href, text }) => (
 								<li key={id}>
 									<Link
-										className="flex flex-col items-center gap-y-[4px] text-[8px] transition-color duration-200 hover:text-primary-text"
+										className="group flex flex-col items-center gap-y-[4px] text-[8px] transition-color duration-200 hover:text-primary-text"
 										href={href}
 									>
 										{icon} {text}
