@@ -39,7 +39,7 @@ export default function SearchProduct() {
 								href="#"
 							>
 								<span>Тест 1</span>
-								<BurgerIcon color="var(--black)" />
+								<BurgerIcon />
 							</Link>
 						</li>
 						<li key={2}>

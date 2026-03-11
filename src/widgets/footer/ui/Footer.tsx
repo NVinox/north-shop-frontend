@@ -1,71 +1,23 @@
-import { ReactNode } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
+import { SOCIALS, LINKS } from "@/widgets/footer";
 
 import {
-	VKIcon,
-	OKIcon,
 	LogoIcon,
 	PhoneIcon,
-	FacebookIcon,
-	InstagramIcon,
 	DesignByLogoIcon,
 	LogoTitleRoundIcon,
 } from "@/shared/icons";
-import {
-	CONTACT_PHONE,
-	POSTS_ROUTE_TEXT,
-	ABOUT_ROUTE_TEXT,
-	POLICY_ROUTE_TEXT,
-	CONTACTS_ROUTE_TEXT,
-	VACANCIES_ROUTE_TEXT,
-	POSTS_ROUTE_URL,
-	ABOUT_ROUTE_URL,
-	POLICY_ROUTE_URL,
-	CONTACTS_ROUTE_URL,
-	VACANCIES_ROUTE_URL,
-} from "@/shared/constants";
+import { CONTACT_PHONE } from "@/shared/constants";
 import { LayoutContainer } from "@/shared/layoutContainer";
-import FooterBackground from "@/shared/assets/footer-bg.jpg";
-
-interface ILink {
-	id: number;
-	text: string;
-	href: string;
-}
-
-interface ISocial {
-	id: number;
-	href: string;
-	icon: ReactNode;
-	socialName: string;
-}
-
-const LINKS: ILink[] = [
-	{ id: 1, text: ABOUT_ROUTE_TEXT, href: ABOUT_ROUTE_URL },
-	{ id: 2, text: CONTACTS_ROUTE_TEXT, href: CONTACTS_ROUTE_URL },
-	{ id: 3, text: VACANCIES_ROUTE_TEXT, href: VACANCIES_ROUTE_URL },
-	{ id: 4, text: POSTS_ROUTE_TEXT, href: POSTS_ROUTE_URL },
-	{ id: 5, text: POLICY_ROUTE_TEXT, href: POLICY_ROUTE_URL },
-];
-
-const SOCIALS: ISocial[] = [
-	{ id: 1, href: "#", icon: <InstagramIcon />, socialName: "Instagram" },
-	{ id: 2, href: "#", icon: <VKIcon />, socialName: "VK" },
-	{ id: 3, href: "#", icon: <FacebookIcon />, socialName: "Facebook" },
-	{ id: 4, href: "#", icon: <OKIcon />, socialName: "OK" },
-];
+import FooterBackground from "@/shared/assets/footer-bg.png";
 
 export default function Footer() {
 	return (
-		<footer className="relative md:py-[24px] sm:py-[32px] xs:py-[40px]">
-			<Image
-				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover h-full z-[-1]"
-				src={FooterBackground}
-				alt="Бэкграунд футера"
-				placeholder="blur"
-			/>
-
+		<footer
+			className="py-[40px] bg-repeat-x bg-center bg-[length:auto_100%] md:py-[24px] sm:py-[32px]"
+			style={{ backgroundImage: `url(${FooterBackground.src})` }}
+		>
 			<LayoutContainer>
 				<div className="grid grid-cols-[auto_1fr_auto] w-full">
 					<div className="flex items-start">
