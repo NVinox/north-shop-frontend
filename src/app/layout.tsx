@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
+import { NavigationMobile } from "@/widgets/navigationMobile";
 
 import { HOME_META_TITLE, HOME_META_DESCRIPTION } from "@/shared/constants";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
 				<Header />
 				<main className="grow">{children}</main>
 				<Footer />
+				<NavigationMobile />
 			</body>
 		</html>
 	);

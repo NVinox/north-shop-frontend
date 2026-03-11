@@ -54,7 +54,7 @@ const LINKS: ILink[] = [
 
 export default function Header() {
 	return (
-		<header className="sticky bg-surface shadow-header z-10 lg:py-0 xs:py-[8px]">
+		<header className="sticky top-0 left-0 w-full bg-surface shadow-header z-10 lg:py-0 xs:py-[8px]">
 			<LayoutContainer>
 				<div className="flex items-center justify-between gap-x-[20px]">
 					<nav>
