@@ -52,7 +52,7 @@ const LINKS: ILink[] = [
 
 export default function NavigationMobile() {
 	return (
-		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header">
+		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header md:hidden">
 			<LayoutContainer>
 				<div className="flex items-center w-full justify-between">
 					<nav className="contents">
