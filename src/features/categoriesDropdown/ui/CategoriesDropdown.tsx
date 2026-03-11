@@ -12,13 +12,13 @@ export default function CategoriesDropdown() {
 	const [isOpen, setOpen] = useState<boolean>(false);
 
 	return (
-		<div onBlur={() => setOpen(false)}>
+		<div className="hidden md:block" onBlur={() => setOpen(false)}>
 			<button
-				className="text-[16px] p-[8px] pr-[16px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer duration-200 transition-colors bg-secondary hover:bg-secondary-hover"
+				className="lg:pr-[16px] text-[16px] p-[8px] pr-[8px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer duration-200 transition-colors bg-secondary hover:bg-secondary-hover"
 				onClick={() => setOpen(true)}
 			>
 				<BurgerIcon />
-				{CATEGORIES_ROUTE_TEXT}
+				<span className="hidden lg:inline">{CATEGORIES_ROUTE_TEXT}</span>
 			</button>
 
 			<AnimatePresence>

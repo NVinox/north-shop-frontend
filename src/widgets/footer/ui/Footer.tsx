@@ -1,9 +1,14 @@
+import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import {
+	VKIcon,
+	OKIcon,
 	LogoIcon,
 	PhoneIcon,
+	FacebookIcon,
+	InstagramIcon,
 	DesignByLogoIcon,
 	LogoTitleRoundIcon,
 } from "@/shared/icons";
@@ -21,10 +26,6 @@ import {
 	VACANCIES_ROUTE_URL,
 } from "@/shared/constants";
 import { LayoutContainer } from "@/shared/layoutContainer";
-import Instagram from "@/shared/assets/instagram.svg";
-import VK from "@/shared/assets/vkontakte.svg";
-import Facebook from "@/shared/assets/facebook.svg";
-import OK from "@/shared/assets/ok.svg";
 import FooterBackground from "@/shared/assets/footer-bg.jpg";
 
 interface ILink {
@@ -36,8 +37,8 @@ interface ILink {
 interface ISocial {
 	id: number;
 	href: string;
-	icon: string;
-	alt: string;
+	icon: ReactNode;
+	socialName: string;
 }
 
 const LINKS: ILink[] = [
@@ -49,15 +50,15 @@ const LINKS: ILink[] = [
 ];
 
 const SOCIALS: ISocial[] = [
-	{ id: 1, href: "#", icon: Instagram, alt: "Instagram" },
-	{ id: 2, href: "#", icon: VK, alt: "VK" },
-	{ id: 3, href: "#", icon: Facebook, alt: "Facebook" },
-	{ id: 4, href: "#", icon: OK, alt: "OK" },
+	{ id: 1, href: "#", icon: <InstagramIcon />, socialName: "Instagram" },
+	{ id: 2, href: "#", icon: <VKIcon />, socialName: "VK" },
+	{ id: 3, href: "#", icon: <FacebookIcon />, socialName: "Facebook" },
+	{ id: 4, href: "#", icon: <OKIcon />, socialName: "OK" },
 ];
 
 export default function Footer() {
 	return (
-		<footer className="relative py-[24px]">
+		<footer className="relative md:py-[24px] sm:py-[32px] xs:py-[40px]">
 			<Image
 				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover h-full z-[-1]"
 				src={FooterBackground}
@@ -66,51 +67,52 @@ export default function Footer() {
 			/>
 
 			<LayoutContainer>
-				<div className="flex flex-col items-end gap-y-[16px]">
-					<div className="flex justify-between items-center gap-x-[20px] w-full">
-						<div className="flex items-center gap-x-[40px]">
-							<div className="flex flex-col items-center">
-								<LogoIcon />
-								<LogoTitleRoundIcon />
-							</div>
-							<nav>
-								<ul className="flex items-center gap-x-[40px]">
-									{LINKS.map(({ id, text, href }) => (
-										<li key={id}>
-											<Link
-												className="text-[12px] duration-200 transition-color hover:text-primary-text py-[5px]"
-												href={href}
-											>
-												{text}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</nav>
-						</div>
-
-						<div className="flex items-start gap-x-[40px]">
-							<ul className="flex items-center gap-x-[16px]">
-								{SOCIALS.map(({ id, href, icon, alt }) => (
-									<li key={id}>
-										<Link href={href}>
-											<Image width={24} height={24} src={icon} alt={alt} />
-										</Link>
-									</li>
-								))}
-							</ul>
-							<div className="flex flex-col gap-y-[25px]">
-								<Link
-									className="flex items-center gap-x-[8px]"
-									href={`tel:+${CONTACT_PHONE.replace(/\s/g, "")}`}
-								>
-									<PhoneIcon />
-									<span>{CONTACT_PHONE}</span>
-								</Link>
-							</div>
+				<div className="grid grid-cols-[auto_1fr_auto] w-full">
+					<div className="flex items-start">
+						<div className="flex flex-col items-center">
+							<LogoIcon />
+							<LogoTitleRoundIcon />
 						</div>
 					</div>
-					<div className="flex items-center gap-x-[8px]">
+					<nav className="xl:max-w-full lg:ml-[40px] md:ml-[20px] md:max-w-[500px] md:col-start-2 md:row-start-1 sm:max-w-full sm:ml-0 sm:mt-0 xs:mt-[20px] xs:row-start-3 xs:col-start-1 xs:col-span-full">
+						<ul className="flex flex-wrap items-center lg:gap-x-[40px] lg:col-start-2 md:gap-y-[8px] md:col-start-1 xs:gap-[16px]">
+							{LINKS.map(({ id, text, href }) => (
+								<li key={id}>
+									<Link
+										className="text-[12px] duration-200 transition-color hover:text-primary-text py-[5px]"
+										href={href}
+									>
+										{text}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+					<ul className="grid md:grid-cols-2 md:gap-[8px] lg:grid-cols-4 lg:gap-[16px] md:row-start-1 md:col-start-3 xs:row-start-1 xs:col-start-3 xs:gap-[16px] xs:grid-cols-4 ml-[30px]">
+						{SOCIALS.map(({ id, href, icon, socialName }) => (
+							<li key={id}>
+								<Link
+									className="shrink-0 block w-[24px]"
+									href={href}
+									rel="nofollow noopener noreferrer"
+									target="_blank"
+									aria-label={socialName}
+								>
+									{icon}
+								</Link>
+							</li>
+						))}
+					</ul>
+					<div className="flex flex-col items-end gap-y-[25px] lg:ml-[40px] md:ml-[25px] md:col-start-4 md:row-start-1 xs:col-start-3 xs:row-start-2">
+						<Link
+							className="flex items-center gap-x-[8px] whitespace-nowrap group"
+							href={`tel:+${CONTACT_PHONE.replace(/\s/g, "")}`}
+						>
+							<PhoneIcon className="shrink-0" />
+							<span>{CONTACT_PHONE}</span>
+						</Link>
+					</div>
+					<div className="hidden md:flex md:items-center md:ml-auto md:gap-x-[8px] md:col-start-4">
 						<span className="text-[12px]">Дизайн</span>
 						<DesignByLogoIcon />
 					</div>

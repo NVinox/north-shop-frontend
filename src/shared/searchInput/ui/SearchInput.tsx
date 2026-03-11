@@ -20,7 +20,7 @@ export default function SearchInput({
 	const id = useId();
 
 	return (
-		<div className="relative">
+		<div className="relative w-full">
 			<input
 				id={id}
 				placeholder={HEADER_SEARCH_PLACEHOLDER}
@@ -29,7 +29,7 @@ export default function SearchInput({
 				onChange={onChange}
 				onFocus={onFocus}
 				className={cn(
-					"py-[8px] pl-[16px] pr-[42px] border-[1px] border-secondary placeholder:text-hard-text transition-all duration-200 focus:outline-none focus:shadow-input-focus",
+					"py-[8px] pl-[16px] pr-[42px] border-1 border-secondary w-full placeholder:text-hard-text transition-all duration-200 focus:outline-none focus:shadow-input-focus",
 					isOpen
 						? "border-b-transparent rounded-b-none rounded-t-[4px]"
 						: "rounded-[4px]",
