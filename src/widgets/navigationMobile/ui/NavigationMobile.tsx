@@ -8,7 +8,7 @@ import PlaceholderAvatar from "@shared/assets/placeholder-avatar.svg";
 
 export default function NavigationMobile() {
 	return (
-		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header md:hidden">
+		<div className="block sticky bottom-0 left-0 w-full bg-surface py-[8px] shadow-header md:hidden z-10">
 			<LayoutContainer>
 				<div className="flex items-center w-full justify-between">
 					<nav className="contents">
