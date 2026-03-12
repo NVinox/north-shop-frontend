@@ -1,5 +1,4 @@
-import { cn } from "@/shared/lib/utils";
-import { StarIcon } from "@/shared/icons";
+import { HalfStarIcon } from "@/shared/icons";
 
 interface IProps {
 	rating: number;
@@ -7,19 +6,18 @@ interface IProps {
 }
 
 export default function Rating({ rating, max = 5 }: IProps) {
+	const normalizedValue = Math.round(rating * 2) / 2;
+
 	return (
 		<ul className="flex items-center gap-x-[4px]">
 			{Array.from({ length: max }).map((_, index) => {
-				const isFilled = index < rating;
+				const starIndex = index + 1;
+				const rightFilled = starIndex <= normalizedValue;
+				const leftFilled = rightFilled || starIndex - 0.5 === normalizedValue;
 
 				return (
 					<li key={index}>
-						<StarIcon
-							className={cn(
-								"transition-base",
-								isFilled ? "text-primary" : "text-light",
-							)}
-						/>
+						<HalfStarIcon fillLeft={leftFilled} fillRight={rightFilled} />
 					</li>
 				);
 			})}

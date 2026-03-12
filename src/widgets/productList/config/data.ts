@@ -9,7 +9,7 @@ export const PRODUCTS: IProduct[] = [
 		imageUrl: ProductTemplate.src,
 		price: 44.5,
 		oldPrice: 50.5,
-		rating: 3,
+		rating: 4.3,
 		discount: 44,
 	},
 	{
@@ -18,7 +18,7 @@ export const PRODUCTS: IProduct[] = [
 		imageUrl: ProductTemplate.src,
 		price: 44.52,
 		oldPrice: 50.5,
-		rating: 4,
+		rating: 3.9,
 		discount: 44,
 	},
 	{
@@ -27,7 +27,7 @@ export const PRODUCTS: IProduct[] = [
 		imageUrl: ProductTemplate.src,
 		price: 44.5,
 		oldPrice: 50.5,
-		rating: 1,
+		rating: 1.3,
 		discount: 44,
 	},
 	{
