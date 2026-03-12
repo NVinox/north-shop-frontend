@@ -35,7 +35,7 @@ export default function SearchProduct() {
 					>
 						<li key={1}>
 							<Link
-								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-base hover:text-primary-text"
 								href="#"
 							>
 								<span>Тест 1</span>
@@ -44,7 +44,7 @@ export default function SearchProduct() {
 						</li>
 						<li key={2}>
 							<Link
-								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-base hover:text-primary-text"
 								href="#"
 							>
 								<span>Тест 2</span>
@@ -52,7 +52,7 @@ export default function SearchProduct() {
 						</li>
 						<li key={3}>
 							<Link
-								className="flex gap-x-[16px] px-[16px] py-[5px] transition-colors duration-200 hover:text-primary-text"
+								className="flex gap-x-[16px] px-[16px] py-[5px] transition-base hover:text-primary-text"
 								href="#"
 							>
 								<span>Тест 3</span>

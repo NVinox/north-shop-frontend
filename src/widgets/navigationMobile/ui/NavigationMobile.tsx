@@ -16,7 +16,7 @@ export default function NavigationMobile() {
 							{LINKS.map(({ id, icon, href, text }) => (
 								<li key={id}>
 									<Link
-										className="group flex flex-col items-center gap-y-[4px] text-[8px] transition-color duration-200 hover:text-primary-text"
+										className="group flex flex-col items-center gap-y-[4px] text-[8px] transition-base hover:text-primary-text"
 										href={href}
 									>
 										{icon} {text}

@@ -31,7 +31,7 @@ export default function Footer() {
 							{LINKS.map(({ id, text, href }) => (
 								<li key={id}>
 									<Link
-										className="text-[12px] duration-200 transition-color hover:text-primary-text py-[5px]"
+										className="text-[12px] transition-base hover:text-primary-text py-[5px]"
 										href={href}
 									>
 										{text}
