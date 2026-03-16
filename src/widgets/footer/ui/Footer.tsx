@@ -31,7 +31,7 @@ export default function Footer() {
 							{LINKS.map(({ id, text, href }) => (
 								<li key={id}>
 									<Link
-										className="text-[12px] transition-base hover:text-primary-text py-[5px]"
+										className="text-xs transition-base hover:text-primary-text py-[5px]"
 										href={href}
 									>
 										{text}
@@ -65,7 +65,7 @@ export default function Footer() {
 						</Link>
 					</div>
 					<div className="hidden md:flex md:items-center md:ml-auto md:gap-x-[8px] md:col-start-4">
-						<span className="text-[12px]">Дизайн</span>
+						<span className="text-xs">Дизайн</span>
 						<DesignByLogoIcon />
 					</div>
 				</div>

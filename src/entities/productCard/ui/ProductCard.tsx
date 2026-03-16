@@ -35,7 +35,7 @@ export default function ProductCard({ product }: IProps) {
 					height={160}
 				/>
 				{product.discount && (
-					<span className="absolute bottom-[8px] left-[8px] py-[4px] px-[8px] bg-primary text-secondary-text rounded-[4px] text-[12px] sm:text-[16px]">
+					<span className="absolute bottom-[8px] left-[8px] py-[4px] px-[8px] bg-primary text-secondary-text rounded-[4px] text-xs sm:text-sm">
 						-{product.discount}&#37;
 					</span>
 				)}
@@ -44,25 +44,25 @@ export default function ProductCard({ product }: IProps) {
 			<div className="flex flex-col gap-y-[8px] p-[8px] h-full">
 				<div>
 					<div className="flex items-center justify-between gap-x-[10px]">
-						<ins className="font-bold no-underline text-[14px] sm:text-[16px]">
+						<ins className="font-bold no-underline text-[14px] sm:text-sm">
 							{product.price.toFixed(2)}&nbsp;&#8381;
 						</ins>
 						{product.oldPrice && (
-							<del className="no-underline text-[14px] sm:text-[16px]">
+							<del className="no-underline text-[14px] sm:text-sm">
 								{product.oldPrice.toFixed(2)}&nbsp;&#8381;
 							</del>
 						)}
 					</div>
 
 					{product.oldPrice && (
-						<div className="flex items-center justify-between gap-x-[20px] text-[8px] sm:text-[12px] text-light-text">
+						<div className="flex items-center justify-between gap-x-[20px] text-[8px] sm:text-xs text-light-text">
 							<span>С картой</span>
 							<span>Обычная</span>
 						</div>
 					)}
 				</div>
 
-				<h3 className="mt-auto text-[12px] sm:text-[16px]">{product.title}</h3>
+				<h3 className="mt-auto text-[12px] sm:text-sm">{product.title}</h3>
 
 				<Rating rating={product.rating} />
 

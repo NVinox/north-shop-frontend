@@ -8,7 +8,7 @@ interface IProps extends LinkProps {
 export default function HeaderLink({ href, children }: IProps) {
 	return (
 		<Link
-			className="flex flex-col items-center gap-y-[5px] text-[12px] transition-base hover:text-primary-text"
+			className="flex flex-col items-center gap-y-[5px] text-xs transition-base hover:text-primary-text"
 			href={href}
 		>
 			{children}

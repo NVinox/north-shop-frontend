@@ -33,7 +33,7 @@ export default function ProfileDropdown() {
 				/>
 				<span className="hidden text-start lg:flex lg:flex-col">
 					<span className="capitalize">Сергей</span>
-					<span className="text-[12px] text-hard-text">Подпись</span>
+					<span className="text-xs text-hard-text">Подпись</span>
 				</span>
 				<ArrowDownIcon className="hidden ml-auto shrink-0 lg:block" />
 			</button>

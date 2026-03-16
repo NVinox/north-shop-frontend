@@ -45,11 +45,11 @@ export default function MainSlider() {
 								/>
 
 								{isH1 ? (
-									<h1 className="text-[18px] font-bold text-center w-full lg:text-right lg:text-[48px] md:text-[35px] xs:text-[24px]">
+									<h1 className="text-base font-bold text-center w-full lg:text-right lg:text-[48px] md:text-lg">
 										{text}
 									</h1>
 								) : (
-									<h2 className="text-[18px] font-bold text-center w-full lg:text-right lg:text-[48px] md:text-[35px] xs:text-[24px]">
+									<h2 className="text-base font-bold text-center w-full lg:text-right lg:text-[48px] md:text-lg">
 										{text}
 									</h2>
 								)}
