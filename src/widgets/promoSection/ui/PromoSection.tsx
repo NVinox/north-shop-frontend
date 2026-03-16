@@ -25,10 +25,10 @@ export default function PromoSection({ className = "" }: IProps) {
 							href="#"
 						>
 							<div className="relative flex flex-col max-w-[260px] h-full z-1">
-								<h3 className="font-bold text-[20px] lg:text-[24px] md:text-[18px]">
+								<h3 className="font-bold text-[20px] lg:text-lg md:text-base">
 									Оформите карту «Северяночка»
 								</h3>
-								<p className="text-[12px] lg:text-[16px] mt-auto">
+								<p className="text-xs lg:text-sm mt-auto">
 									И&nbsp;получайте бонусы при&nbsp;покупке в&nbsp;магазинах
 									и&nbsp;на&nbsp;сайте
 								</p>
@@ -49,10 +49,10 @@ export default function PromoSection({ className = "" }: IProps) {
 							href="#"
 						>
 							<div className="relative flex flex-col max-w-[260px] h-full z-1">
-								<h3 className="font-bold text-[20px] lg:text-[24px] md:text-[18px]">
+								<h3 className="font-bold text-[20px] lg:text-lg md:text-base">
 									Покупайте акционные товары
 								</h3>
-								<p className="text-[12px] lg:text-[16px] mt-auto">
+								<p className="text-xs lg:text-sm mt-auto">
 									И&nbsp;получайте вдвое больше бонусов
 								</p>
 							</div>

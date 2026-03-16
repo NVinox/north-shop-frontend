@@ -38,6 +38,12 @@
 @theme inline {
 	--font-sans: var(--font-rubik);
 
+	--text-xs: 12px;
+	--text-sm: 16px;
+	--text-base: 18px;
+	--text-lg: 24px;
+	--text-xl: 36px;
+
 	--color-surface-text: var(--surface-text);
 	--color-secondary-text: var(--secondary-text);
 	--color-hard-text: var(--hard);
