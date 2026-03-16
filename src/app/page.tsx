@@ -12,16 +12,16 @@ export default function Home() {
 				titleLink="Все акции"
 			/>
 			<ProductList
-				className="pt-[80px] lg:pt-[120px] md:pt-[100px]"
+				className="section-base"
 				title="Новинки"
 				titleLink="Все новинки"
 			/>
 			<ProductList
-				className="pt-[80px] lg:pt-[120px] md:pt-[100px]"
+				className="section-base"
 				title="Покупали раньше"
 				titleLink="Все покупки"
 			/>
-			<PromoSection className="pt-[80px] lg:pt-[120px] md:pt-[100px]" />
+			<PromoSection className="section-base" />
 		</>
 	);
 }

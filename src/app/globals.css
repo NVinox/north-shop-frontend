@@ -76,6 +76,18 @@
 	@apply transition-all duration-200 ease-in-out;
 }
 
+@utility section-base {
+	@apply pt-[80px] lg:pt-[120px] md:pt-[100px];
+}
+
+@utility header-second-base {
+	@apply font-bold text-[24px] md:text-[36px];
+}
+
+@utility margin-second-header {
+	@apply mb-[16px] lg:mb-[40px] md:mb-[32px];
+}
+
 body {
 	font-family: var(--font-rubik);
 	background-color: var(--app-bg);
