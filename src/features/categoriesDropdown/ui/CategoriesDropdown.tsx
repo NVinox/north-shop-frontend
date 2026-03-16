@@ -14,7 +14,7 @@ export default function CategoriesDropdown() {
 	return (
 		<div className="hidden md:block" onBlur={() => setOpen(false)}>
 			<button
-				className="lg:pr-[16px] text-[16px] p-[8px] pr-[8px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer duration-200 transition-colors bg-secondary hover:bg-secondary-hover"
+				className="lg:pr-[16px] text-sm p-[8px] pr-[8px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer transition-base bg-secondary hover:bg-secondary-hover"
 				onClick={() => setOpen(true)}
 			>
 				<BurgerIcon />
@@ -35,7 +35,7 @@ export default function CategoriesDropdown() {
 								<ul className="max-w-[270px] w-full">
 									<li key={1}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Хлебобулочные изделия
@@ -43,7 +43,7 @@ export default function CategoriesDropdown() {
 									</li>
 									<li key={2}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Молоко, сыр, яйцо
@@ -51,7 +51,7 @@ export default function CategoriesDropdown() {
 									</li>
 									<li key={3}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Фрукты и овощи
@@ -59,7 +59,7 @@ export default function CategoriesDropdown() {
 									</li>
 									<li key={4}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Замороженные продукты
@@ -70,7 +70,7 @@ export default function CategoriesDropdown() {
 								<ul className="max-w-[270px] w-full">
 									<li key={1}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Напитки
@@ -78,7 +78,7 @@ export default function CategoriesDropdown() {
 									</li>
 									<li key={2}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Кондитерские изделия
@@ -86,7 +86,7 @@ export default function CategoriesDropdown() {
 									</li>
 									<li key={3}>
 										<Link
-											className="font-bold block py-[10px] transition-color duration-200 hover:text-primary-text"
+											className="font-bold block py-[10px] transition-base hover:text-primary-text"
 											href="#"
 										>
 											Чай, кофе

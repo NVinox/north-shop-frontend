@@ -33,12 +33,9 @@ export default function ProfileDropdown() {
 				/>
 				<span className="hidden text-start lg:flex lg:flex-col">
 					<span className="capitalize">Сергей</span>
-					<span className="text-[12px] text-hard-text">Подпись</span>
+					<span className="text-xs text-hard-text">Подпись</span>
 				</span>
-				<ArrowDownIcon
-					className="hidden ml-auto shrink-0 lg:block"
-					isRotate={isOpen}
-				/>
+				<ArrowDownIcon className="hidden ml-auto shrink-0 lg:block" />
 			</button>
 
 			<AnimatePresence>
@@ -52,7 +49,7 @@ export default function ProfileDropdown() {
 					>
 						<li key={1}>
 							<button
-								className="text-left px-[16px] py-[8px] w-full transition-colors duration-200 hover:text-primary-text cursor-pointer"
+								className="text-left px-[16px] py-[8px] w-full transition-base hover:text-primary-text cursor-pointer"
 								type="button"
 							>
 								<span>Выйти</span>

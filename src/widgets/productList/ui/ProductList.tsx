@@ -1,0 +1,49 @@
+import Link from "next/link";
+
+import { ProductCard } from "@/entities/productCard";
+import { PRODUCTS } from "@/widgets/productList";
+
+import { LayoutContainer } from "@/shared/layoutContainer";
+import { ArrowDownIcon } from "@/shared/icons";
+
+interface IProps {
+	title: string;
+	titleLink: string;
+	pageLink?: string;
+	className?: string;
+}
+
+export default function ProductList({
+	title,
+	titleLink,
+	pageLink = "#",
+	className = "",
+}: IProps) {
+	return (
+		<section className={className}>
+			<LayoutContainer>
+				<div className="flex justify-between margin-second-header">
+					<h2 className="header-second">{title}</h2>
+
+					<Link
+						className="group flex items-center gap-x-[8px] text-grey-text transition-base hover:text-primary-text"
+						href={pageLink}
+					>
+						<span>{titleLink}</span>
+						<div className="-rotate-90">
+							<ArrowDownIcon />
+						</div>
+					</Link>
+				</div>
+
+				<ul className="grid grid-cols-[1fr_1fr] gap-[16px] xl:gap-[40px] lg:grid-cols-[1fr_1fr_1fr_1fr] lg:gap-[32px] md:grid-cols-[1fr_1fr_1fr]">
+					{PRODUCTS.map((product) => (
+						<li key={product.id}>
+							<ProductCard product={product} />
+						</li>
+					))}
+				</ul>
+			</LayoutContainer>
+		</section>
+	);
+}

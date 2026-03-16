@@ -1,56 +1,15 @@
-import { ReactNode } from "react";
 import Link from "next/link";
+
+import { LINKS } from "@/widgets/header";
 
 import { SearchProduct } from "@/features/searchProduct";
 import { ProfileDropdown } from "@/features/profileDropdown";
 import { CategoriesDropdown } from "@/features/categoriesDropdown";
 
-import {
-	BoxIcon,
-	LogoIcon,
-	CartIcon,
-	HeartIcon,
-	LogoTitleIcon,
-} from "@/shared/icons";
-import {
-	HOME_ROUTE_URL,
-	CART_ROUTE_URL,
-	CART_ROUTE_TEXT,
-	ORDERS_ROUTE_TEXT,
-	ORDERS_ROUTE_URL,
-	FAVORITES_ROUTE_URL,
-	FAVORITES_ROUTE_TEXT,
-} from "@/shared/constants";
+import { LogoIcon, LogoTitleIcon } from "@/shared/icons";
 import { LayoutContainer } from "@/shared/layoutContainer";
 import { HeaderLink } from "@/shared/headerLink";
-
-interface ILink {
-	id: number;
-	icon: ReactNode;
-	href: string;
-	text: string;
-}
-
-const LINKS: ILink[] = [
-	{
-		id: 1,
-		icon: <HeartIcon />,
-		href: FAVORITES_ROUTE_URL,
-		text: FAVORITES_ROUTE_TEXT,
-	},
-	{
-		id: 2,
-		icon: <BoxIcon />,
-		href: ORDERS_ROUTE_URL,
-		text: ORDERS_ROUTE_TEXT,
-	},
-	{
-		id: 3,
-		icon: <CartIcon />,
-		href: CART_ROUTE_URL,
-		text: CART_ROUTE_TEXT,
-	},
-];
+import { HOME_ROUTE_URL } from "@/shared/constants";
 
 export default function Header() {
 	return (

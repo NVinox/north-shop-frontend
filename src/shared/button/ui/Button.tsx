@@ -1,0 +1,26 @@
+import { cn } from "@/shared/lib/utils";
+
+interface IProps {
+	type?: "primary" | "secondary" | "ghost";
+	children: string;
+}
+
+export default function Button({ children, type = "primary" }: IProps) {
+	return (
+		<button
+			className={cn(
+				"border-1 p-[8px] grow text-center rounded-[4px] transition-base cursor-pointer",
+				{
+					"text-secondary-text border-primary bg-primary hover:shadow-button-primary-hover active:shadow-button-active":
+						type === "primary",
+					"text-secondary-text border-secondary bg-secondary hover:shadow-button-secondary-hover active:shadow-button-active":
+						type === "secondary",
+					"text-secondary border-secondary hover:text-secondary-text hover:border-primary hover:bg-primary active:shadow-button-active":
+						type === "ghost",
+				},
+			)}
+		>
+			{children}
+		</button>
+	);
+}
