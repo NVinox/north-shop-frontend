@@ -23,7 +23,7 @@ export default function ProductList({
 		<section className={className}>
 			<LayoutContainer>
 				<div className="flex justify-between margin-second-header">
-					<h2 className="header-second-base">{title}</h2>
+					<h2 className="header-second">{title}</h2>
 
 					<Link
 						className="group flex items-center gap-x-[8px] text-grey-text transition-base hover:text-primary-text"

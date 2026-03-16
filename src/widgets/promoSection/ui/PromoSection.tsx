@@ -14,7 +14,7 @@ export default function PromoSection({ className = "" }: IProps) {
 	return (
 		<section className={className}>
 			<LayoutContainer>
-				<h2 className="header-second-base margin-second-header">
+				<h2 className="header-second margin-second-header">
 					Специальные предложения
 				</h2>
 

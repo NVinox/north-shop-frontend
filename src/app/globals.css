@@ -80,12 +80,16 @@
 	@apply pt-[80px] lg:pt-[120px] md:pt-[100px];
 }
 
-@utility header-second-base {
-	@apply font-bold text-[24px] md:text-[36px];
-}
-
 @utility margin-second-header {
 	@apply mb-[16px] lg:mb-[40px] md:mb-[32px];
+}
+
+@utility header-first {
+	@apply text-[36px] lg:text-[64px] md:text-[48px];
+}
+
+@utility header-second {
+	@apply font-bold text-[24px] md:text-[36px];
 }
 
 body {
