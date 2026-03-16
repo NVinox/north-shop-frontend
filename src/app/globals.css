@@ -19,6 +19,8 @@
 	--hard: #8f8f8f;
 
 	--app-bg: #fbf8ec;
+	--offer-card-primary-bg: #fcd5ba;
+	--offer-card-secondary-bg: #e5ffde;
 
 	--secondary-hover: #72ce5b;
 
@@ -29,6 +31,8 @@
 	--shadow-button-primary: rgba(255, 102, 51, 0.2);
 	--shadow-button-secondary: rgba(112, 192, 91, 0.2);
 	--shadow-button-active: rgba(0, 0, 0, 0.2);
+	--shadow-card-offer-primary: rgba(255, 102, 51, 0.2);
+	--shadow-card-offer-secondary: rgba(112, 192, 91, 0.2);
 }
 
 @theme inline {
@@ -48,6 +52,9 @@
 	--color-lightest: var(--lightest);
 	--color-light: var(--light);
 
+	--color-card-primary-bg: var(--offer-card-primary-bg);
+	--color-card-secondary-bg: var(--offer-card-secondary-bg);
+
 	--color-secondary-hover: var(--secondary-hover);
 
 	--shadow-header: 2px 2px 8px 0 var(--shadow-header-dark);
@@ -58,6 +65,9 @@
 	--shadow-button-primary-hover: 4px 8px 16px 0 var(--shadow-button-primary);
 	--shadow-button-secondary-hover: 4px 8px 16px 0 var(--shadow-button-secondary);
 	--shadow-button-active: inset 0 2px 0 0 var(--shadow-button-active);
+	--shadow-card-offer-primary: 0 8px 16px 0 var(--shadow-card-offer-primary);
+	--shadow-card-offer-secondary: 4px 8px 16px 0
+		var(--shadow-card-offer-secondary);
 
 	--breakpoint-xs: 320px;
 }
