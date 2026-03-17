@@ -1,6 +1,7 @@
 import { MainSlider } from "@/widgets/mainSlider";
 import { ProductList } from "@/widgets/productList";
 import { PromoSection } from "@/widgets/promoSection";
+import { ShopsSection } from "@/widgets/shopsSection";
 
 export default function Home() {
 	return (
@@ -22,6 +23,7 @@ export default function Home() {
 				titleLink="Все покупки"
 			/>
 			<PromoSection className="section-base" />
+			<ShopsSection className="section-base" />
 		</>
 	);
 }
