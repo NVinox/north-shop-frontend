@@ -14,7 +14,7 @@ export default function ShopsSection({ className = "" }: IProps) {
 			<LayoutContainer>
 				<h2 className="header-second margin-second-header">Наши магазины</h2>
 
-				<div className="flex flex-col gap-y-[24px]">
+				<div className="flex flex-col gap-y-[16px] md:gap-y-[24px]">
 					<Tabs
 						inputName="addresses"
 						checkedValue="shchelyaur"

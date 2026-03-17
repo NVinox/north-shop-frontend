@@ -12,7 +12,7 @@ export default function AddressesTabs({
 	checkedValue = "all",
 }: IProps) {
 	return (
-		<form className="flex items-center gap-x-[25px]">
+		<form className="flex flex-wrap items-center gap-y-[8px] gap-x-[8px] lg:gap-x-[24px] md:gap-x-[16px]">
 			{tabs.map(({ id, text }) => (
 				<div key={id}>
 					<input
