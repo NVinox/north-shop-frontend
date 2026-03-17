@@ -9,7 +9,7 @@ export default function Button({ children, type = "primary" }: IProps) {
 	return (
 		<button
 			className={cn(
-				"border-1 p-[8px] grow text-center rounded-card transition-base cursor-pointer",
+				"border-1 p-[8px] grow text-center rounded-xs transition-base cursor-pointer",
 				{
 					"text-secondary-text border-primary bg-primary hover:shadow-button-primary-hover active:shadow-button-active":
 						type === "primary",

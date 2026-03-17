@@ -34,7 +34,7 @@
 	--shadow-card-offer-primary: rgba(255, 102, 51, 0.2);
 	--shadow-card-offer-secondary: rgba(112, 192, 91, 0.2);
 
-	--rounded-card: 4px;
+	--rounded-xs: 4px;
 }
 
 @theme inline {
@@ -79,7 +79,7 @@
 
 	--breakpoint-xs: 320px;
 
-	--radius-card: var(--rounded-card);
+	--radius-xs: var(--rounded-xs);
 }
 
 @utility transition-base {

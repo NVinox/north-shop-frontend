@@ -14,7 +14,7 @@ interface IProps {
 
 export default function ProductCard({ product }: IProps) {
 	return (
-		<article className="relative flex flex-col h-full h-max-[350px] bg-surface transition-shadow transition-base shadow-card rounded-card hover:shadow-card-hover">
+		<article className="relative flex flex-col h-full h-max-[350px] bg-surface transition-shadow transition-base shadow-card rounded-xs hover:shadow-card-hover">
 			<Link
 				className="absolute inset-0 z-3"
 				aria-label="Молоко Простоквашино"
@@ -35,7 +35,7 @@ export default function ProductCard({ product }: IProps) {
 					height={160}
 				/>
 				{product.discount && (
-					<span className="absolute bottom-[8px] left-[8px] py-[4px] px-[8px] bg-primary text-secondary-text rounded-card text-xs sm:text-sm">
+					<span className="absolute bottom-[8px] left-[8px] py-[4px] px-[8px] bg-primary text-secondary-text rounded-xs text-xs sm:text-sm">
 						-{product.discount}&#37;
 					</span>
 				)}

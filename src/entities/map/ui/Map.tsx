@@ -28,10 +28,7 @@ export default function Map() {
 	return (
 		<div>
 			<Script src={YANDEX_MAP_URL} onLoad={initMap} />
-			<div
-				className="rounded-card overflow-hidden h-[355px]"
-				ref={mapRef}
-			></div>
+			<div className="rounded-xs overflow-hidden h-[355px]" ref={mapRef}></div>
 		</div>
 	);
 }
