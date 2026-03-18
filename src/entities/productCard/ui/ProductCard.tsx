@@ -28,7 +28,7 @@ export default function ProductCard({ product }: IProps) {
 					<HeartIcon />
 				</button>
 				<Image
-					className="absolute inset-0 max-h-full m-auto max-w-full object-contain"
+					className="image-contain"
 					src={ProductTemplate}
 					alt="Альт для продукта"
 					width={272}

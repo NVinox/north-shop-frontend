@@ -90,6 +90,10 @@
 	@apply pt-[80px] lg:pt-[120px] md:pt-[100px];
 }
 
+@utility section-last {
+	@apply pt-[80px] pb-[40px] lg:pt-[120px] lg:pb-[80px] md:pt-[100px] md:pb-[60px];
+}
+
 @utility margin-second-header {
 	@apply mb-[16px] lg:mb-[40px] md:mb-[32px];
 }
@@ -100,6 +104,14 @@
 
 @utility header-second {
 	@apply font-bold text-[24px] md:text-[36px];
+}
+
+@utility image-contain {
+	@apply absolute inset-0 max-h-full m-auto max-w-full object-contain;
+}
+
+@utility image-cover {
+	@apply absolute inset-0 m-auto w-full h-full object-cover;
 }
 
 body {
