@@ -32,7 +32,7 @@ export default function SearchInput({
 					"py-[8px] pl-[16px] pr-[42px] border-1 border-secondary w-full placeholder:text-hard-text transition-all transition-base focus:outline-none focus:shadow-input-focus",
 					isOpen
 						? "border-b-transparent rounded-b-none rounded-t-[4px]"
-						: "rounded-[4px]",
+						: "rounded-xs",
 				)}
 			/>
 			<div className="absolute top-0 right-0 flex items-center justify-center w-[40px] h-full">

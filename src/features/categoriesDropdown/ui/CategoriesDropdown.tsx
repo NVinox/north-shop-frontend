@@ -14,7 +14,7 @@ export default function CategoriesDropdown() {
 	return (
 		<div className="hidden md:block" onBlur={() => setOpen(false)}>
 			<button
-				className="lg:pr-[16px] text-sm p-[8px] pr-[8px] flex items-center gap-x-[16px] text-secondary-text rounded-[4px] cursor-pointer transition-base bg-secondary hover:bg-secondary-hover"
+				className="lg:pr-[16px] text-sm p-[8px] pr-[8px] flex items-center gap-x-[16px] text-secondary-text rounded-xs cursor-pointer transition-base bg-secondary hover:bg-secondary-hover"
 				onClick={() => setOpen(true)}
 			>
 				<BurgerIcon />
@@ -28,7 +28,7 @@ export default function CategoriesDropdown() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
-						className="fixed top-[74px] left-0 bg-surface rounded-[4px] py-[30px] w-full shadow-dropdown z-5"
+						className="fixed top-[74px] left-0 bg-surface rounded-xs py-[30px] w-full shadow-dropdown z-5"
 					>
 						<LayoutContainer>
 							<div className="flex gap-x-[40px]">

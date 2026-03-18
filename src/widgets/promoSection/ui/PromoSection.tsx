@@ -21,7 +21,7 @@ export default function PromoSection({ className = "" }: IProps) {
 				<ul className="grid gap-[16px] lg:gap-[40px] md:gap-[32px] sm:grid-cols-[1fr_1fr] xs:gap-cols-[1fr]">
 					<li>
 						<Link
-							className="block relative overflow-hidden rounded-[4px] px-[20px] py-[20px] bg-card-primary-bg transition-base hover:shadow-card-offer-primary h-full max-h-[335px] md:max-h-[350px] lg:max-h-[585px] lg:px-[40px] lg:py-[30px]"
+							className="block relative overflow-hidden rounded-xs px-[20px] py-[20px] bg-card-primary-bg transition-base hover:shadow-card-offer-primary h-full max-h-[335px] md:max-h-[350px] lg:max-h-[585px] lg:px-[40px] lg:py-[30px]"
 							href="#"
 						>
 							<div className="relative flex flex-col max-w-[260px] h-full z-1">
@@ -45,7 +45,7 @@ export default function PromoSection({ className = "" }: IProps) {
 					</li>
 					<li>
 						<Link
-							className="block relative overflow-hidden rounded-[4px] px-[20px] py-[20px] bg-card-secondary-bg transition-base hover:shadow-card-offer-secondary h-full max-h-[335px] md:max-h-[350px] lg:max-h-[585px] lg:px-[40px] lg:py-[30px]"
+							className="block relative overflow-hidden rounded-xs px-[20px] py-[20px] bg-card-secondary-bg transition-base hover:shadow-card-offer-secondary h-full max-h-[335px] md:max-h-[350px] lg:max-h-[585px] lg:px-[40px] lg:py-[30px]"
 							href="#"
 						>
 							<div className="relative flex flex-col max-w-[260px] h-full z-1">

@@ -3,6 +3,9 @@ export const HOME_META_TITLE = "Главная | Северяночка";
 export const HOME_META_DESCRIPTION =
 	"Северяночка топ магазин, всегда там отовариваюсь";
 
+// API
+export const YANDEX_MAP_URL = `${process.env.NEXT_PUBLIC_YANDEX_BASE_URL}/?apikey=${process.env.NEXT_PUBLIC_YANDEX_API_KEY}&lang=ru_RU`;
+
 // Routes url
 export const HOME_ROUTE_URL = "/";
 export const CATEGORIES_ROUTE_URL = "/categories";
