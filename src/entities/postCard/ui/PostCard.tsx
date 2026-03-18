@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { IPost } from "@/entities/postCard";
 
-import { Button } from "@/shared/button";
+import { LinkLikeButton } from "@/shared/linkLikeButton";
 
 interface IProps {
 	post: IPost;
@@ -13,7 +13,7 @@ export default function PostCard({ post }: IProps) {
 	const { image, date, title, description, link } = post;
 
 	return (
-		<article className="relative flex flex-col overflow-hidden h-full h-max-[420px] bg-surface rounded-xs">
+		<article className="relative flex flex-col overflow-hidden h-full h-max-[420px] bg-surface rounded-xs transition-base hover:shadow-card-hover">
 			<Link
 				className="absolute inset-0 z-3"
 				aria-label="Молоко Простоквашино"
@@ -33,15 +33,17 @@ export default function PostCard({ post }: IProps) {
 			</header>
 
 			<div className="flex flex-col gap-y-[10px] p-[10px] h-full">
-				<span className="text-xs text-hard-text">{date}</span>
+				<span className="text-[8px] text-hard-text lg:text-xs">{date}</span>
 
-				<h3 className="font-bold text-base">{title}</h3>
+				<h3 className="font-bold text-sm lg:text-base">{title}</h3>
 
-				<p>{description}</p>
+				<p className="text-xs lg:text-sm">{description}</p>
 
 				<footer className="mt-auto">
-					<div className="relative flex z-5">
-						<Button type="secondary">Подробнее</Button>
+					<div className="relative flex max-w-[150px] z-5">
+						<LinkLikeButton link={link} type="secondaryLight">
+							Подробнее
+						</LinkLikeButton>
 					</div>
 				</footer>
 			</div>

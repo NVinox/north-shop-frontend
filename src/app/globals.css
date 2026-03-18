@@ -12,6 +12,7 @@
 	--black: #000000;
 	--primary: #ff6633;
 	--secondary: #70c05b;
+	--secondary-light: #e5ffde;
 	--success: #008c49;
 	--info: #1cb9fc;
 	--warning: #fca21c;
@@ -48,6 +49,7 @@
 
 	--color-surface-text: var(--surface-text);
 	--color-secondary-text: var(--secondary-text);
+	--color-success-text: var(--success);
 	--color-hard-text: var(--hard);
 	--color-primary-text: var(--primary);
 	--color-grey-text: var(--grey-text);
@@ -55,13 +57,14 @@
 
 	--color-success: var(--success);
 	--color-secondary: var(--secondary);
+	--color-secondary-light: var(--secondary-light);
 	--color-surface: var(--surface);
 	--color-primary: var(--primary);
 	--color-lightest: var(--lightest);
 	--color-light: var(--light);
 
 	--color-card-primary-bg: var(--offer-card-primary-bg);
-	--color-card-secondary-bg: var(--offer-card-secondary-bg);
+	--color-card-secondary-bg: var(--secondary-light);
 
 	--color-secondary-hover: var(--secondary-hover);
 

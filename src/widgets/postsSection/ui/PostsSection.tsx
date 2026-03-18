@@ -29,7 +29,7 @@ export default function PostsSection({ className = "" }: IProps) {
 					</Link>
 				</div>
 
-				<ul className="grid grid-cols-[1fr_1fr_1fr] gap-x-[40px]">
+				<ul className="grid gap-x-[32px] gap-y-[20px] lg:gap-x-[40px] sm:grid-cols-[1fr_1fr_1fr] xs:grid-cols-[1fr]">
 					{POSTS.map((post) => (
 						<li key={post.id}>
 							<PostCard post={post} />
