@@ -23,7 +23,7 @@ export default function AddressesTabs({
 						defaultChecked={id === checkedValue}
 					/>
 					<label
-						className="block px-[20px] py-[5px] bg-lightest text-grey-text rounded-card cursor-pointer transition-base peer-checked:bg-secondary peer-checked:text-surface hover:bg-secondary hover:text-surface"
+						className="block px-[20px] py-[5px] bg-lightest text-grey-text rounded-xs cursor-pointer transition-base peer-checked:bg-secondary peer-checked:text-surface hover:bg-secondary hover:text-surface"
 						htmlFor={id}
 					>
 						{text}

@@ -12,6 +12,7 @@
 	--black: #000000;
 	--primary: #ff6633;
 	--secondary: #70c05b;
+	--secondary-light: #e5ffde;
 	--success: #008c49;
 	--info: #1cb9fc;
 	--warning: #fca21c;
@@ -34,7 +35,7 @@
 	--shadow-card-offer-primary: rgba(255, 102, 51, 0.2);
 	--shadow-card-offer-secondary: rgba(112, 192, 91, 0.2);
 
-	--rounded-card: 4px;
+	--rounded-xs: 4px;
 }
 
 @theme inline {
@@ -48,6 +49,7 @@
 
 	--color-surface-text: var(--surface-text);
 	--color-secondary-text: var(--secondary-text);
+	--color-success-text: var(--success);
 	--color-hard-text: var(--hard);
 	--color-primary-text: var(--primary);
 	--color-grey-text: var(--grey-text);
@@ -55,13 +57,14 @@
 
 	--color-success: var(--success);
 	--color-secondary: var(--secondary);
+	--color-secondary-light: var(--secondary-light);
 	--color-surface: var(--surface);
 	--color-primary: var(--primary);
 	--color-lightest: var(--lightest);
 	--color-light: var(--light);
 
 	--color-card-primary-bg: var(--offer-card-primary-bg);
-	--color-card-secondary-bg: var(--offer-card-secondary-bg);
+	--color-card-secondary-bg: var(--secondary-light);
 
 	--color-secondary-hover: var(--secondary-hover);
 
@@ -79,7 +82,7 @@
 
 	--breakpoint-xs: 320px;
 
-	--radius-card: var(--rounded-card);
+	--radius-xs: var(--rounded-xs);
 }
 
 @utility transition-base {
@@ -88,6 +91,10 @@
 
 @utility section-base {
 	@apply pt-[80px] lg:pt-[120px] md:pt-[100px];
+}
+
+@utility section-last {
+	@apply pt-[80px] pb-[40px] lg:pt-[120px] lg:pb-[80px] md:pt-[100px] md:pb-[60px];
 }
 
 @utility margin-second-header {
@@ -100,6 +107,14 @@
 
 @utility header-second {
 	@apply font-bold text-[24px] md:text-[36px];
+}
+
+@utility image-contain {
+	@apply absolute inset-0 max-h-full m-auto max-w-full object-contain;
+}
+
+@utility image-cover {
+	@apply absolute inset-0 m-auto w-full h-full object-cover;
 }
 
 body {
